@@ -116,17 +116,3 @@ class EdgeWebDriver():
             self.cart_quantity = int(cart_count_element.text)
             print(f"cart quantity - {self.cart_quantity}")
         return self
-
-edgeBrowserTest = EdgeWebDriver(url='https://www.amazon.in')
-(edgeBrowserTest
- .launch_web_app()
- .navigate_to_userSignIn()
- .user_input_username()
- .user_input_password_and_signin()
- .search_product_in_home_search_box("OnePlus Nord 4 5G (Obsidian Midnight, 8GB RAM, 256GB Storage)")
- .check_cart()
-#.add_to_cart_from_pdp()
-.add_to_cart_from_search_results()
- .check_cart())
-#driver=edgeBrowserTest.launch_web_app("https://www.amazon.in")
-#edgeBrowserTest.navigate_to_userSignIn(driver)
